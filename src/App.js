@@ -1,8 +1,8 @@
 import './App.scss';
-import locations from './data/locations';
+import locations from './Data/locations';
 import { useState } from 'react'
-import CurrentWeather from './components/CurrentWeather';
-import SelectedCity from './components/SelectedCity';
+import CurrentWeather from './Components/CurrentWeather';
+import SelectedCity from './Components/SelectedCity';
 
 function App() {
 
@@ -11,9 +11,11 @@ function App() {
   return (
     <div className="App">
       <h1>Weather App</h1>
+      <div className="locationsContainer">
       {locations.map((location, i) => {
         return <CurrentWeather location={location} key={i} setSelectedCity={setSelectedCity} />
       })}
+      </div>
       {selectedCity && <SelectedCity location={selectedCity} />}
     </div>
   );
