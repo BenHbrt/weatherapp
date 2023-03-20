@@ -45,3 +45,8 @@
         transform: scale(1.05);
     }
 }
+
+.inactive {
+    opacity: 0.5;
+    filter: blur(0.5px);
+}

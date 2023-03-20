@@ -6,7 +6,9 @@ import isDaytime from '../Functions/IsDaytime'
 import getTimeString from '../Functions/GetTimeString'
 import { useState, useEffect } from 'react'
 
-const CurrentWeather = ({ location, setSelectedCity }) => {
+const CurrentWeather = ({ location, setSelectedCity, selectedCity }) => {
+
+  const isSelected = selectedCity === null || selectedCity.city === location.city
     
     const [currentWeather, setCurrentWeather] = useState(null)
 
@@ -28,7 +30,7 @@ const CurrentWeather = ({ location, setSelectedCity }) => {
     return (
         <>
             {currentWeather &&
-                <div className="currentWeather" onClick={() => {setSelectedCity(location)}}>
+                <div className={`currentWeather ${isSelected ? "" : "inactive"}`} onClick={() => {setSelectedCity(location)}}>
                     <div className="currentWeather_city">{location.city}</div>
                     <div className='currentWeather_mainInfo'>
                         <div className="currentWeather_mainInfo_temp">{currentWeather.temperature}°C</div>

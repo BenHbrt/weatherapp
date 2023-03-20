@@ -1,0 +1,12 @@
+.selectedcity {
+
+    &_title {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    &_container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
