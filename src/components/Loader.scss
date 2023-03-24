@@ -1,0 +1,29 @@
+@keyframes rotate {
+    0% {transform: rotateZ(0deg);}
+    25% {transform: rotateZ(90deg);}
+    50% {transform: rotateZ(180deg);}
+    75% {transform: rotateZ(270deg);}
+    100% {transform: rotateZ(360deg);}
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 2px 2px lightgray;
+    border-radius: 1em;
+    padding: 0.8rem;
+    margin: 1rem;
+    transition: 1s;
+
+    & span {
+        font-size: 1.5rem;
+    }
+
+    & img {
+        animation: rotate 2s linear infinite;
+    }
+}
+
+.animation {
+    opacity: 0;
+}
