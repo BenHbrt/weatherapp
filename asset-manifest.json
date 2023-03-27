@@ -1,12 +1,9 @@
 {
   "files": {
-    "main.css": "/weatherapp/static/css/main.9f4dbdc8.css",
-    "main.js": "/weatherapp/static/js/main.b7675834.js",
+    "main.css": "/weatherapp/static/css/main.24771853.css",
+    "main.js": "/weatherapp/static/js/main.946890de.js",
     "static/media/heavy-rain.png": "/weatherapp/static/media/heavy-rain.95892180f12c72aa8e39.png",
-    "static/media/hot.png": "/weatherapp/static/media/hot.2de553afebf49adca5ae.png",
     "static/media/storm.png": "/weatherapp/static/media/storm.abea6aa30bc66915560e.png",
-    "static/media/hail.png": "/weatherapp/static/media/hail.d2ec8037e88274343b0c.png",
-    "static/media/cold.png": "/weatherapp/static/media/cold.a0e27e9111b28c0a3ddc.png",
     "static/media/rain.png": "/weatherapp/static/media/rain.fea62e3beeb0049f5768.png",
     "static/media/snowing.png": "/weatherapp/static/media/snowing.b08dafc21cf5c0102ce0.png",
     "static/media/partly-cloudy.png": "/weatherapp/static/media/partly-cloudy.46d14d94f86b2333db65.png",
@@ -20,15 +17,13 @@
     "static/media/fog.png": "/weatherapp/static/media/fog.000fa7622fe3d97327ae.png",
     "static/media/night.png": "/weatherapp/static/media/night.8c6b0a4b06e2ce6defc3.png",
     "static/media/light-rain.png": "/weatherapp/static/media/light-rain.031b8b1eb51bc7b4d26c.png",
-    "static/media/wind.png": "/weatherapp/static/media/wind.e6a790430bdcead4d886.png",
-    "static/media/warning.png": "/weatherapp/static/media/warning.b1d3c5484a8cbb6991dd.png",
     "static/media/overcast.png": "/weatherapp/static/media/overcast.2f7df7cb1010225d7cbd.png",
     "index.html": "/weatherapp/index.html",
-    "main.9f4dbdc8.css.map": "/weatherapp/static/css/main.9f4dbdc8.css.map",
-    "main.b7675834.js.map": "/weatherapp/static/js/main.b7675834.js.map"
+    "main.24771853.css.map": "/weatherapp/static/css/main.24771853.css.map",
+    "main.946890de.js.map": "/weatherapp/static/js/main.946890de.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f4dbdc8.css",
-    "static/js/main.b7675834.js"
+    "static/css/main.24771853.css",
+    "static/js/main.946890de.js"
   ]
 }
