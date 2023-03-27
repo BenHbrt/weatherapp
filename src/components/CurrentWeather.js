@@ -12,8 +12,8 @@ const CurrentWeather = ({ location, setSelectedCity, selectedCity }) => {
   const isSelected = selectedCity === null || selectedCity.city === location.city
     
     const [currentWeather, setCurrentWeather] = useState(null)
-    // const [isWeatherSet, setIsWeatherSet] = useState(false)
-    // const [showWeather, setShowWeather] = useState(false)
+    const [isWeatherSet, setIsWeatherSet] = useState(false)
+    const [showWeather, setShowWeather] = useState(false)
 
     const loadData = async () => {
       const ApiData = await axios.get(`https://api.open-meteo.com/v1/forecast?latitude=${location.lat}&longitude=${location.lon}&current_weather=true&timezone=auto&daily=sunrise,sunset`)
@@ -25,7 +25,7 @@ const CurrentWeather = ({ location, setSelectedCity, selectedCity }) => {
         type: weatherType(ApiData.data.current_weather.weathercode, isDaytime(ApiData.data.current_weather.time, ApiData.data.daily.sunrise[0], ApiData.data.daily.sunset[0])),
         time: getTimeString(ApiData.data.current_weather.time)     
       })
-      // setIsWeatherSet(true)
+      setIsWeatherSet(true)
     }
   
     useEffect(() => {
@@ -35,9 +35,15 @@ const CurrentWeather = ({ location, setSelectedCity, selectedCity }) => {
       }, 1500)
     }, [])
 
+    useEffect(() => {
+      setTimeout(() => {
+        setShowWeather(true)
+      }, 2000)
+    }, [isWeatherSet])
+
     return (
         <>
-            { currentWeather ?
+            { showWeather ?
                 <div className={`currentWeather ${isSelected ? "" : "inactive"}`} onClick={() => {setSelectedCity(location)}}>
                     <div className="currentWeather_city">{location.city}</div>
                     <div className='currentWeather_mainInfo'>
@@ -49,7 +55,7 @@ const CurrentWeather = ({ location, setSelectedCity, selectedCity }) => {
                     <div className="currentWeather_updated">Last updated at {currentWeather.time} local time.</div>
                 </div>
                 :
-                <Loader />
+                <Loader animation={isWeatherSet}/>
             }
         </>
     )

@@ -1,3 +1,8 @@
+@keyframes showWeather {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 .currentWeather {
     display: flex;
     flex-direction: column;
@@ -6,6 +11,7 @@
     padding: 0.8rem;
     margin: 1rem;
     transition: 0.5s;
+    animation: showWeather 2s linear;
 
     &_city {
         font-weight: 700;

@@ -4,7 +4,7 @@ const Loader = ({ animation }) => {
     return (
         <div className={`loader ${animation ? "animation" : ""}`}>
             <span>Loading...</span>
-            <img src={require('../img/WeatherIcons/loading.png')} />
+            <img src={require('../img/Other/loading.png')} />
         </div>
     )
 }

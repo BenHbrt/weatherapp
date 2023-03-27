@@ -3,6 +3,7 @@ import locations from './Data/locations';
 import { useState } from 'react'
 import CurrentWeather from './Components/CurrentWeather';
 import SelectedCity from './Components/SelectedCity';
+import Credits from './Components/Credits';
 
 function App() {
 
