@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Weather App</h1>
+      <h1 id="top">Weather App</h1>
       <div className="locationsContainer">
       {locations.map((location, i) => {
         return <CurrentWeather location={location} key={i} setSelectedCity={setSelectedCity} selectedCity={selectedCity}/>

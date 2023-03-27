@@ -1,0 +1,15 @@
+.scrollbutton {
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 2px lightgray;
+    width: 48px;
+    height: 48px;
+
+    &:hover {
+        background-color: lightgray;
+    }
+
+    @media screen and (min-width: 1000px) {
+        display: none;
+    }
+
+}

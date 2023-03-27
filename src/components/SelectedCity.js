@@ -3,6 +3,7 @@ import './SelectedCity.scss'
 import { useState, useEffect } from 'react'
 import DayForecast from './DayForecast'
 import Loader from './Loader'
+import ScrollButton from './ScrollButton'
 
 const SelectedCity = ({ location }) => {
 
@@ -52,6 +53,9 @@ const SelectedCity = ({ location }) => {
                     })
                     :
                     <Loader animation={!isLoading && !isLoaded}/>
+                }
+                {
+                    isLoaded && <ScrollButton />
                 }
             </div>
         </div>
