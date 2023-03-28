@@ -1,17 +1,24 @@
-import './App.scss';
-import { HashRouter, Routes, Route } from "react-router-dom";
-import Main from './Components/Main';
-import Credits from './Components/Credits';
+import "./App.scss"
+import locations from './Data/locations';
+import { useState } from 'react'
+import CurrentWeather from './Components/CurrentWeather';
+import SelectedCity from './Components/SelectedCity';
 
-function App() {
-  return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/credits" element={<Credits />} />
-      </Routes>
-    </HashRouter>
-  )
+const App = () => {
+
+    const [selectedCity, setSelectedCity] = useState(null)
+
+    return (
+        <div className="App">
+          <h1 id="top">Weather App</h1>
+          <div className="locationsContainer">
+          {locations.map((location, i) => {
+            return <CurrentWeather location={location} key={i} setSelectedCity={setSelectedCity} selectedCity={selectedCity}/>
+          })}
+          </div>
+          {selectedCity && <SelectedCity location={selectedCity} />}
+        </div>
+    );
 }
 
-export default App;
+export default App
