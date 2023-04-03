@@ -12,3 +12,21 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.App {
+
+    &_creditsbutton {
+        border: 1px solid black;
+        display: inline-block;
+        padding: 0 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: lightgray;
+        }
+    }
+}

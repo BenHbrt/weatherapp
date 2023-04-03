@@ -1,0 +1,24 @@
+.credits {
+    & > h2:not(h2:first-of-type) {
+        font-size: 1.2rem;
+    }
+
+    &_flaticons {
+
+        &_icon {
+
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+
+            & > img {
+                width: 100px;
+                margin-right: 0.5rem;
+            }
+
+            & > span > a {
+                text-decoration: none;
+            }
+        }
+    }
+}
