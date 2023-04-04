@@ -12,6 +12,7 @@ const App = () => {
 
     return (
         <div className="App">
+          {(selectedCity && !displayCredits) && <img className="App_img" src={require(`./img/Backgrounds/${selectedCity.backgroundImg.type.img}`)} />}
           <h1 id="top">Weather App</h1>
           {displayCredits ?
             <div className="App_creditsbutton" onClick={() => setDisplayCredits(false)}>Back</div>
